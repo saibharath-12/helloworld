@@ -1,5 +1,10 @@
-node{
-  stage('SCM Checkout'){
-    git 'https://github.com/saibharath-12/helloworld'
-  }
+pipeline {
+    agent any
+    stages {
+        stage("hello"){
+            steps{
+                echo "Hello World"
+            }
+        }
+    }
 }
